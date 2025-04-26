@@ -25,41 +25,31 @@
 
   <body>
 
-    <div class="border m-1 container">Container padrão
+    <div class="bg-dark d-flex flex-column" style="min-height: 100vh;">
 
-      <p>
-        Cor padrão (equivalente ao <code>.text-body</code>)
-        <a href="#">Link</a>
-      </p>
-      <p class="text-body">
-        Cor padrão (equivalente ao <code class="text-reset">.text-body</code>)
-        <a class="text-reset" href="#">Link</a>
-      </p>
-      <p class="text-primary">
-        Cor padrão (equivalente ao <code class="text-reset">.text-success</code>)
-        <a class="text-reset" href="#">Link</a>
-      </p>
-    </div>
+      <header class="bg-info">
+        header
+      </header>
 
-    <div class="container">
-      <div class="row">
-
-        <div class="bg-sm-success col-4 col-md-2">
-          coluna 1
-        </div>
-        <div class="bg-secondary col-8 col-md-4">
-          coluna 2
-        </div>
-        <div class="bg-warning col-4 col-md-2">
-          coluna 3
-        </div>
-        <div class="bg-info col-8 col-md-4">
-          coluna 4
-        </div>
+      <div class="d-flex flex-column flex-sm-row flex-grow-1">
+        <nav class="bg-success">
+          Menu
+        </nav>
+        <main class="bg-secondary flex-grow-1">
+          Main
+        </main>
+        <aside class="bg-primary">
+          Barra
+        </aside>
 
       </div>
 
+      <footer class="bg-danger">
+        Footer
+      </footer>
+
     </div>
+
 
     <script src="js/app.js"></script>
 
