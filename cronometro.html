@@ -4,15 +4,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>App de Ferramentas - Ferramenta "Contador"</title>
+  <title>App de Ferramentas - Ferramenta "Cronômetro"</title>
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" />
   <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css" />
   <link rel="stylesheet" href="css/style.css" />
   <meta name="description" content="" />
 
-  <meta property="og:title" content="Ferramenta &quot;Contador&quot;" />
+  <meta property="og:title" content="Ferramenta &quot;Cronometro&quot;" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="http://localhost:8080/contador.html" />
+  <meta property="og:url" content="http://localhost:8080/cronometro.html" />
   <meta property="og:image" content="/favicon.png" />
   <meta property="og:image:alt" content="Icon de estrela" />
 
@@ -41,10 +41,10 @@
               <a class="nav-link" href="index.html">Seletor</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Contador</a>
+              <a class="nav-link" href="contador.html">Contador</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="cronometro.html">Cronômetro</a>
+              <a class="nav-link active" aria-current="page" href="#">Cronômetro</a>
             </li>
           </ul>
         </div>
@@ -57,7 +57,7 @@
         <div class="container-fluid py-5">
           <h1 class="display-5 fw-bold">Contador</h1>
           <p class="fs-4">
-            Utilize os botões abaixo para registrar uma contagem.
+            Utilize os botões abaixo para registrar o tempo.
           </p>
         </div>
       </div>
@@ -65,8 +65,9 @@
       <div class="container">
         <div class="row mb-3">
           <div class="d-grid gap-2 d-md-flex flex-nowrap justify-content-md-center d-md-block ">
-            <button type="submit" id="botao-mais" class="btn btn-success order-md-3"><i class="bi bi-plus-circle-fill"></i> 1</button>
-            <button type="submit" id="botao-menos" class="btn btn-danger order-md-1"><i class="bi bi-dash-circle-fill"></i> 1</button>
+            <button type="submit" id="botao-iniciar" class="btn btn-success order-md-1"><i class="bi bi-play-circle-fill"></i> Iniciar</button>
+            <button type="submit" id="botao-pausar" class="btn btn-warning order-md-2"><i class="bi bi-pause-circle-fill"></i> Pausar</button>
+            <button type="submit" id="botao-reiniciar" class="btn btn-danger order-md-3"><i class="bi bi-stop-circle-fill"></i> Reiniciar</button>
           </div>
         </div>
         <div class="row">
@@ -87,7 +88,7 @@
   </div>
 
   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-  <script src="js/appContador.js"></script>
+  <script src="js/appCronometro.js"></script>
 
 </body>
 
