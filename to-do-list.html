@@ -4,15 +4,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>App de Ferramentas - Home</title>
+  <title>App de Ferramentas - Ferramenta "To Do List"</title>
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" />
   <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css" />
   <link rel="stylesheet" href="css/style.css" />
   <meta name="description" content="" />
 
-  <meta property="og:title" content="Homepage do meu projeto" />
+  <meta property="og:title" content="Ferramenta &quot;To Do List&quot;" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="http://localhost:8080/index.html" />
+  <meta property="og:url" content="http://localhost:8080/to-do-list.html" />
   <meta property="og:image" content="/favicon.png" />
   <meta property="og:image:alt" content="Icon de estrela" />
 
@@ -38,7 +38,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-md-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Seletor</a>
+              <a class="nav-link" href="index.html">Seletor</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contador.html">Contador</a>
@@ -47,7 +47,7 @@
               <a class="nav-link" href="cronometro.html">Cronômetro</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="to-do-list.html">To Do List</a>
+              <a class="nav-link active" aria-current="page" href="#">To Do List</a>
             </li>
           </ul>
         </div>
@@ -58,40 +58,26 @@
 
       <div class="p-5 mb-4 bg-light rounded-3">
         <div class="container-fluid py-5">
-          <h1 class="display-5 fw-bold">Seletor de cor</h1>
+          <h1 class="display-5 fw-bold">To Do List</h1>
           <p class="fs-4">
-            Informe o nome ou cód da cor no campo abaixo.
-            A cor de fundo da página será atualizada de acordo.
+            Adicione ou remova itens em sua lista de tarefas.
           </p>
         </div>
       </div>
 
-      <form class="container">
+      <div class="container">
         <div class="row mb-3">
-          <div class="col-12 col-sm-4">
-            <label for="exampleInputEmail1" class="pt-2">
-              Cor escolhida:
-            </label>
-          </div>
-
-          <div class="col-12 col-sm-8">
-            <input
-              type="text"
-              class="form-control"
-              id="input-cor"
-              name="input-color"
-            />
-          </div>
-          <div id="input-cor-help" class=" col-12 form-text">
-            Você pode usar qualquer formato de cor válido de CSS.
+          <div class="d-grid gap-2 d-md-flex flex-nowrap justify-content-md-center d-md-block ">
+            <button type="submit" id="botao-adicionar" class="btn btn-success"><i class="bi bi-plus-square-fill"></i> Adicionar</button>
           </div>
         </div>
         <div class="row">
           <div class="col">
-            <button type="submit" class="btn btn-primary"><i class="bi bi-eye-fill"></i> Ver</button>
+            <h1 class="" id="output"></h3>
           </div>
         </div>
-      </form>
+      </div>
+
 
     </main>
 
@@ -103,7 +89,7 @@
   </div>
 
   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-  <script src="js/appIndex.js"></script>
+  <script src="js/appToDoList.js"></script>
 
 </body>
 
