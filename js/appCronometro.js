@@ -32,7 +32,7 @@ function executa(acao){
           break;
         case "reiniciar":
           cont = 0;
-          //atualizarView();
+          atualizarView();
           break;
       }
 
