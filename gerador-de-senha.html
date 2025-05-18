@@ -64,38 +64,55 @@
 
       <div class="p-5 mb-4 bg-light rounded-3">
         <div class="container-fluid py-5">
-          <h1 class="display-5 fw-bold">To Do List</h1>
+          <h1 class="display-5 fw-bold">Gerador de Senha</h1>
           <p class="fs-4">
             Selecione as opções para gerar uma senha aleatória
           </p>
         </div>
       </div>
 
-      <div id="tarefas" class="container" style="max-width: 40em;">
-
+      <div id="gerador-de-senha" class="container" style="max-width: 40em;">
         <div class="row mb-3">
-          <div class="d-grid gap-2 d-md-flex flex-nowrap justify-content-md-center d-md-block ">
-            <button type="submit" id="botao-adicionar" class="btn btn-success">
-              <i class="bi bi-plus-square-fill"></i>
-              Adicionar</button>
-          </div>
-        </div>
-        <div class="row mt-2">
-          <div class="col d-flex align-items-center">
-            <input class="flex-grow-1 form-control" type="text" placeholder="Digite aqui sua tarefa">
-            <div class="form-check form-switch ms-2 me-1">
-              <input class="form-check-input" type="checkbox" id="nome-tarefa" role="switch"
-                style="width: 3em; height: 1.5em;">
+          <div class="col-12 col-md-7 text-start">
+
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="numeros">
+              <label class="form-check-label" for="numeros">Números (0-9)</label>
             </div>
-            <div>
-              <button type="submit" id="botao-lixo" class="btn btn-danger"><i class="bi bi-trash-fill"></i></button>
+
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="maisculas">
+              <label class="form-check-label" for="maisculas">Maiusculas (A-Z)</label>
             </div>
+
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="minusculas">
+              <label class="form-check-label" for="minusculas">Minusculas (a-z)</label>
+            </div>
+
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="especiais">
+              <label class="form-check-label" for="especiais">Especiais (!@#$%&*-=/+)</label>
+            </div>
+
           </div>
-        </div>
-        <div class="row">
+
+          <div class="col-12 col-md-5 text-start">
+
+            <div class="mb-3">
+              <label for="comprimento" class="form-label">Comprimento:</label>
+              <input type="number" class="form-control" id="comprimento" value="6">
+            </div>
+
+          </div>
           <div class="col">
-            <h1 class="" id="output">
-              </h3>
+            <button type="submit" id="botao-gerar" class="btn btn-success">
+              <i class="bi bi-shuffle"></i>
+              Gerar
+            </button>
+            <output class="d-block bg-dark text-white my-2 p-2">
+              Ajuste as opções e pressione o botão gerar
+            </output>
           </div>
         </div>
       </div>
