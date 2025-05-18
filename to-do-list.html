@@ -49,6 +49,12 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">To Do List</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contagem Regressiva</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gerador-de-senha.html">Gerador de senha</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -65,15 +71,31 @@
         </div>
       </div>
 
-      <div class="container">
+      <div id="tarefas" class="container" style="max-width: 40em;">
+
         <div class="row mb-3">
           <div class="d-grid gap-2 d-md-flex flex-nowrap justify-content-md-center d-md-block ">
-            <button type="submit" id="botao-adicionar" class="btn btn-success"><i class="bi bi-plus-square-fill"></i> Adicionar</button>
+            <button type="submit" id="botao-adicionar" class="btn btn-success">
+              <i class="bi bi-plus-square-fill"></i>
+              Adicionar</button>
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col d-flex align-items-center">
+            <input class="flex-grow-1 form-control" type="text" placeholder="Digite aqui sua tarefa">
+            <div class="form-check form-switch ms-2 me-1">
+              <input class="form-check-input" type="checkbox" id="nome-tarefa" role="switch"
+                style="width: 3em; height: 1.5em;">
+            </div>
+            <div>
+              <button type="submit" id="botao-lixo" class="btn btn-danger"><i class="bi bi-trash-fill"></i></button>
+            </div>
           </div>
         </div>
         <div class="row">
           <div class="col">
-            <h1 class="" id="output"></h3>
+            <h1 class="" id="output">
+              </h3>
           </div>
         </div>
       </div>
