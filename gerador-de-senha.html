@@ -4,15 +4,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>App de Ferramentas - Ferramenta "Cronômetro"</title>
+  <title>App de Ferramentas - Ferramenta "Gerador de Senha"</title>
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" />
   <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css" />
   <link rel="stylesheet" href="css/style.css" />
   <meta name="description" content="" />
 
-  <meta property="og:title" content="Ferramenta &quot;Cronometro&quot;" />
+  <meta property="og:title" content="Ferramenta &quot;Gerador de Senha&quot;" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="http://localhost:8080/cronometro.html" />
+  <meta property="og:url" content="http://localhost:8080/gerador-de-senha.html" />
   <meta property="og:image" content="/favicon.png" />
   <meta property="og:image:alt" content="Icon de estrela" />
 
@@ -44,7 +44,7 @@
               <a class="nav-link" href="contador.html">Contador</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Cronômetro</a>
+              <a class="nav-link" href="cronometro.html">Cronômetro</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="to-do-list.html">To Do List</a>
@@ -53,7 +53,7 @@
               <a class="nav-link" href="#">Contagem Regressiva</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="gerador-de-senha.html">Gerador de senha</a>
+              <a class="nav-link active" aria-current="page" href="#">Gerador de senha</a>
             </li>
           </ul>
         </div>
@@ -64,24 +64,38 @@
 
       <div class="p-5 mb-4 bg-light rounded-3">
         <div class="container-fluid py-5">
-          <h1 class="display-5 fw-bold">Contador</h1>
+          <h1 class="display-5 fw-bold">To Do List</h1>
           <p class="fs-4">
-            Utilize os botões abaixo para registrar o tempo.
+            Selecione as opções para gerar uma senha aleatória
           </p>
         </div>
       </div>
 
-      <div class="container">
+      <div id="tarefas" class="container" style="max-width: 40em;">
+
         <div class="row mb-3">
           <div class="d-grid gap-2 d-md-flex flex-nowrap justify-content-md-center d-md-block ">
-            <button type="submit" id="botao-iniciar" class="btn btn-success order-md-1"><i class="bi bi-play-circle-fill"></i> Iniciar</button>
-            <button type="submit" id="botao-pausar" class="btn btn-warning order-md-2"><i class="bi bi-pause-circle-fill"></i> Pausar</button>
-            <button type="submit" id="botao-reiniciar" class="btn btn-danger order-md-3"><i class="bi bi-stop-circle-fill"></i> Reiniciar</button>
+            <button type="submit" id="botao-adicionar" class="btn btn-success">
+              <i class="bi bi-plus-square-fill"></i>
+              Adicionar</button>
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col d-flex align-items-center">
+            <input class="flex-grow-1 form-control" type="text" placeholder="Digite aqui sua tarefa">
+            <div class="form-check form-switch ms-2 me-1">
+              <input class="form-check-input" type="checkbox" id="nome-tarefa" role="switch"
+                style="width: 3em; height: 1.5em;">
+            </div>
+            <div>
+              <button type="submit" id="botao-lixo" class="btn btn-danger"><i class="bi bi-trash-fill"></i></button>
+            </div>
           </div>
         </div>
         <div class="row">
           <div class="col">
-            <h1 class="contador-estilo" id="output">0</h3>
+            <h1 class="" id="output">
+              </h3>
           </div>
         </div>
       </div>
@@ -97,7 +111,7 @@
   </div>
 
   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-  <script src="js/appCronometro.js"></script>
+  <script src="js/appGeradorDeSenha.js"></script>
 
 </body>
 
