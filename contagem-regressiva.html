@@ -1,0 +1,138 @@
+<!doctype html>
+<html class="no-js" lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>App de Ferramentas - Ferramenta "Contagem Regressiva"</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <meta name="description" content="" />
+
+  <meta property="og:title" content="Ferramenta &quot;Contagem Regressiva&quot;" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://localhost:8080/contagem-regressiva.html" />
+  <meta property="og:image" content="/favicon.png" />
+  <meta property="og:image:alt" content="Icon de estrela" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="manifest" href="site.webmanifest" />
+  <meta name="theme-color" content="#fafafa" />
+</head>
+
+<body>
+
+  <div class="d-flex flex-column" style="min-height: 100vh;">
+
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Seletor</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contador.html">Contador</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cronometro.html">Cronômetro</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="to-do-list.html">To Do List</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Contagem Regressiva</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gerador-de-senha.html">Gerador de senha</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="flex-grow-1 p-2 text-center">
+
+      <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5">
+          <h1 class="display-5 fw-bold">Contagem Regressiva</h1>
+          <p class="fs-4">
+            Esta aplicação recupera de um Web Service a data de um evento, e então exibe uma contagem regressiva.
+          </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row mb-3">
+          <div class="d-grid gap-2 d-md-flex flex-nowrap justify-content-center d-md-block ">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body white--text card-title" id="cor-dia" style="height: 6rem;">
+                <p class="card-text text-light fs-2" id="data-dia">
+                  8
+                </p>
+              </div>
+              <div class="card-body">
+                <p class="card-text fs-4">dias</p>
+              </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+              <div class="card-body white--text card-title" id="cor-hora" style="height: 6rem;">
+                <p class="card-text text-light fs-2" id="data-hora">
+                  8
+                </p>
+              </div>
+              <div class="card-body">
+                <p class="card-text fs-4">horas</p>
+              </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+              <div class="card-body white--text card-title" id="cor-minuto" style="height: 6rem;">
+                <p class="card-text text-light fs-2" id="data-minuto">
+                  8
+                </p>
+              </div>
+              <div class="card-body">
+                <p class="card-text fs-4">minutos</p>
+              </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+              <div class="card-body white--text card-title" id="cor-segundo" style="height: 6rem;">
+                <p class="card-text text-light fs-2" id="data-segundo">
+                  8
+                </p>
+              </div>
+              <div class="card-body">
+                <p class="card-text fs-4">segundos</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+
+    <footer class="bg-light text-black-50 text-center fst-italic p-3">
+      @Ferdzen, 2025.
+    </footer>
+
+  </div>
+
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  <script src="js/appContagemRegressiva.js"></script>
+
+</body>
+
+</html>

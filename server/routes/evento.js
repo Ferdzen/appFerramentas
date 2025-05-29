@@ -3,22 +3,42 @@ var router = express.Router();
 
 /* GET informações do dia dos namorados listing. */
 router.get('/', function(req, res, next) {
-
   // Configurando CORS individualmente
-  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8080')
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8080');
 
-  //Versão final da tarefa:
-  // const data = new Date("2025-06-12");
+  const data = new Date("2025-06-12T00:00:00.000");
 
-  /// gerar data a 5 segundos de "distância" da data atual:
-  const data = new Date();
-  const atual = data.getTime();
-  data.setTime(atual + 5*1000);
+  // Timestamp atual
+  const atual = new Date().getTime();
 
-  /// "Output" (corpo da resposta):
+  // Diferença entre a data futura e o tempo atual
+  const diferenca = data.getTime() - atual;
+
+  const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+  const horas = Math.floor((diferenca / (1000 * 60 * 60)) % 24);
+  const minutos = Math.floor((diferenca / (1000 * 60)) % 60);
+  const segundos = Math.floor((diferenca / 1000) % 60);
+
+  if (diferenca <= 0) {
+    return res.send(JSON.stringify({
+      nomeEvento: 'Dia dos Namorados',
+      data: data.toISOString(), // transforma para string legível no frontend
+      dia: 0,
+      hora: 0,
+      minuto: 0,
+      segundo: 0,
+      passou: true,
+    }));
+  }
+
   res.send({
-    nomeEvent: 'Dia dos Namorados',
-    data: data
+    nomeEvento: 'Dia dos Namorados',
+    data: data.toISOString(), // transforma para string legível no frontend
+    dia: dias,
+    hora: horas,
+    minuto: minutos,
+    segundo: segundos,
+    passou: false,
   });
 });
 
